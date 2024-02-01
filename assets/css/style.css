@@ -1,0 +1,67 @@
+/* Reset CSS */
+* {
+    padding: 0;
+    margin: 0;
+    /* include border and padding in element's total size */
+    box-sizing: border-box;
+}
+
+/* set font for website */
+html {
+    font-family: Helvetica, Arial, sans-serif;
+}
+/*
+1. outside to inside
+2. top-down approach 
+ */
+/* 
+1. position
+2. size (width, height)
+3. color
+4. shape
+*/
+#main {
+
+}
+
+#header {
+    height: 46px;
+    background-color: #000;
+}
+
+#nav {
+
+}
+
+#nav li {
+    /* have the inline properties but still keep the
+    properties of block for modifying size */
+    display: inline-block;
+}
+
+#nav li a {
+    /* a has display inline so it doesnt have size */
+    color: #fff;
+    /* remove the underline */
+    text-decoration: none;
+    /* center word */
+    line-height: 46px;
+    padding: 0 24px;
+}
+
+#nav .subnav {
+    /* hide the element */
+    display: none;
+}
+
+#slider {
+
+}
+
+#content {
+
+}
+
+#footer {
+
+}
