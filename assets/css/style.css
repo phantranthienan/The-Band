@@ -25,6 +25,14 @@ html {
 }
 
 #header {
+    position: fixed;
+    /*!after setting the position fixed, header float to a new layer*/
+    /*!so it does not inherit the width of container tag anymore */
+    /* as a result, when we set height for the content or slider,
+    it will flood to the top? */
+    top: 0px;
+    right: 0px;
+    left: 0px;
     height: 46px;
     background-color: #000;
 }
@@ -34,7 +42,7 @@ html {
 }
 
 #nav {
-
+    display: inline-block;
 }
 
 #nav > li {
@@ -99,9 +107,32 @@ hover properties of ul should be kept */
     line-height: 38px;
 }
 
+#nav .nav-narrow-down {
+    font-size: 14px;
+}
+
+#header .search-btn {
+    float: right;
+    padding: 0px 21px;
+    /*!modify the shape of cursor*/
+    /* cursor: pointer; */
+}
+
+#header .search-btn:hover {
+    cursor: pointer;
+    background-color: #f44336;
+}
+
+#header .search-icon {
+    color: #fff;
+    font-size: 20px;
+    line-height: 46px;
+}
+
 #slider {
-    min-height: 500px;
-    background-color: #000;
+    margin-top: 46px;
+    min-height: 1000px;
+    background-color: #ccc;
 }
 
 #content {
