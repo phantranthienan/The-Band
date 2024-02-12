@@ -35,6 +35,8 @@ html {
     left: 0px;
     height: 46px;
     background-color: #000;
+    /* !make a layer float above */
+    z-index: 1;
 }
 
 #nav, .subnav {
@@ -130,9 +132,37 @@ hover properties of ul should be kept */
 }
 
 #slider {
+    position: relative;
     margin-top: 46px;
-    min-height: 1000px;
-    background-color: #ccc;
+    /* !padding-top: 50% takes 50% of their own width */
+    /* !therefore we can reach a perfect balance height = 1/2 width */
+    padding-top: 50%;
+    background: url('/assets/images/chicago.jpg') top center / cover no-repeat;
+
+
+}
+
+#slider .text-content {
+    position: absolute;
+    bottom: 48px;
+    color: #fff;
+    /* !center 1 */
+    /* left: 50%;
+    transform: translateX(-50%); */
+    /* !center 2 */
+    width: 100%;
+    /* !center 3 */
+    /* left: 0;
+    right: 0; */
+    text-align: center;
+}
+#slider .text-heading {
+    font-weight: 500;
+    font-size: 24px;
+}
+#slider .text-description {
+    font-size: 15px;
+    margin-top: 25px;
 }
 
 #content {
